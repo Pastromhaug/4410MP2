@@ -16,7 +16,7 @@ int alloc_init(void * memarea, int size) {
 		return -1;
 	}
 	struct Header initHead = {4, NULL};
-	((struct header*)memarea)[0] = initHead;
+	((struct Header*)memarea)[0] = initHead;
 	return 0;
 }
 
@@ -27,13 +27,13 @@ void * alloc_get(void * memarea, int size) {
 
 	void * memAreaEnd = ((char*)memarea)+totalMemSize;
 	void * blockEnd = ((char*) (((struct Header*)iter) + 1)) + size;
-	while (true){
+	while (1){
 		if (blockEnd >= memAreaEnd) {
 			return 0;
 		}
 
 		int blockSize = ((struct Header*)iter)->size;
-		if (
+
 	}
 }
 
