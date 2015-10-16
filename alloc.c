@@ -6,7 +6,7 @@
  */
 
 struct Header{
-	unsigned int* size;
+	unsigned int size;
 	struct Header * next;
 };
 
